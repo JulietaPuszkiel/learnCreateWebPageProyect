@@ -1,0 +1,304 @@
+/*GENERAL*/
+*{
+    background-color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*HEADER*/
+header{                                     /*Caracterísiticas básicas del header*/
+    color: #B4A5A5;
+    background-color:rgb(12, 1, 20);
+    padding: 2%;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+h1{                                         /*Título principal "CACTA"*/
+    font-size: 60px;
+    background-color:rgb(12, 1, 20);
+    
+}
+
+h2{                                         /*Subtítutlo "Studio Photography"*/
+    text-indent: 5px;
+    background-color:rgb(12, 1, 20);
+
+}
+
+@keyframes changeColor{                     /*Animación del fondo del header. 1° bloque: cambios de color -- 2° bloque: enlace al cambio de color + velocidad y tipo de animación*/
+    from {background: rgb(23, 2, 37);}
+    to {background: rgb(4, 0, 7);}
+}
+
+.anim {
+    animation: changeColor 5s linear infinite alternate;
+}
+
+
+/*NAV*/
+nav{                                        /*Márgenes básicos de la barra de navegación*/
+    margin: auto;
+    padding: 10px;
+}
+
+body ul{                                    /*Caracterísiticas generales de la lista de navegación. JULI, NO LO BORRES PORQUE SE ROMPE TODO*/
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 20px;
+    background-color: black; 
+}
+
+
+
+/*MAIN*/
+main{                                       /*Fondo del main completo*/
+    background-color: black;
+    margin: 0%;
+    padding-bottom: 5%;
+}
+
+#esencialGilada{                            /*Frase de cabecera*/
+    font-size: 13px;
+    text-align: center;
+    font-style: italic;
+}
+
+a{                                          /*3 bloques de formato para los links (colores + animación; tanto para posición de cursos, como visitado)*/                   
+    color: #B4A5A5;
+    font-style: normal;
+}
+
+a:hover{
+    padding: 4px 6px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.25s;
+}
+
+a:visited{
+    color:#B4A5A5;
+    font-style: normal;
+}
+
+
+/*BODY*/
+body{                                       /*Formato básico de texto del body*/
+    color: #B4A5A5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3{                                         /*Formato del subtítulo "Portfolio"*/
+    font-size: 20px;
+    display: block;
+}
+
+
+/*FOOTER*/
+footer{
+    background-color: black;
+    padding-bottom: 1%;
+    border-top: 5px solid black;
+    margin-top: 0%;
+}
+
+.Contacto{                                  /*Márgenes, estilo, color y posición del footer en general*/
+    line-height: 40px;
+    font-size: 18px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}
+
+.linksContacto{                        
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+
+iframe{                                     /*Mapa de Google*/
+    box-sizing:content-box;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    padding: 1%;
+}
+
+#Contact{                                  /*Título "Contacto"*/
+    font-size: 25px;
+    line-height: 2px;
+    padding-bottom: 1%;
+    text-decoration: underline;
+}
+
+
+/*HOME*/
+.container{                                 /*Clase Padre contenedora de fotos + texto*/
+    padding-top: 3%;
+}
+
+.col{                                       /*Foto + texto (individuales)*/
+    padding: 1%;
+    display: block;
+    line-height: 7px;
+    
+}
+
+#señorMardel, #guitarraCarajo{              /*Imágenes individuales (s/n texto)*/
+    padding-bottom: 3%;
+}
+
+.col p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.container-sm{                              /*Formato básico de animación en carrusel (tamaño + márgenes + etc)*/
+    max-width: 300px;
+    box-sizing:content-box;
+    padding-top:6%;
+    padding-bottom: 5%;
+}
+
+
+/*PRECIOS*/
+.pricePrincipal{
+    padding-top: 3%;
+}
+
+h4{                                         /*Título "Precios*"*/
+    font-size: 20px;
+    padding-left: 1%;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.prices{                                    /*Clase Padre de la grilla*/
+    margin: 0;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+}
+
+.contenedorGrilla{                          /*Subclase de la grilla. Indica cantidades de filas + columnas y su comportamiento general*/
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr ;
+    grid-template-rows: 7fr 7fr 7fr 7fr 7fr 7fr 7fr ;
+    grid-row-gap: 3% ;
+    text-align: center;
+}
+
+.itemGrilla{                                /*Clase Hijo de la grilla (celdas individuales). Formato de línea.*/
+    border-bottom: 2px dotted #b4a5a542;
+}
+
+#note{                                      /*Nota al pie de la grilla*/
+    font-style: oblique;
+    font-size: 12px;
+    padding-top: 3%;
+}
+
+.formularios{                               /*Formulario espantoso*/
+    height: 20px;
+    padding-left: 2%;
+    margin-left: 50px;
+    padding: 15%;
+    margin: 100px;
+}
+
+.espaciosBlancos,.opcion{            /*Botones del formulario. Todo feo*/
+    border: 2px solid #585858;
+    background-color:rgb(172, 190, 199);
+    height: 25px;
+}
+
+button{
+    padding-top: 0%;
+    margin: 10px 10px 10px 10px;
+    background-color: rgb(131, 131, 131);
+    border: 2px solid #585858;
+
+}
+
+#calendar{
+    padding-right: 0%;
+    margin: 10px;
+}
+
+/*ABOUT*/
+.About{                                    /*Formato de texto*/
+    padding-top: 3%;
+    margin:0px;
+    padding-bottom: 5%;
+    padding-left: 0%;
+}
+
+.about2{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 230px;
+    margin-right: 130px;
+    border: 4px solid rgb(29, 3, 48);
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-top: 3%;
+}
+
+#titulo{
+    padding-left: 35%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ol{
+    font-weight: bold;
+
+}
+
+
+/*CONCERTS + NATURE + URBAN*/
+.tarjetas{                                  /*Clase Padre de cada imagen + texto. Declaración de márgenes + fondo*/
+    margin: 0px;
+    background-color: black;
+    padding-top: 5%;
+    padding-left: 15%;
+
+}
+
+.tarjetitas{                                /*Subclase de cada imagen + texto. Indica comportamiento*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:last baseline; 
+}
+
+.tarjeta{                                   /*Imagen + texto (individuales)*/
+    margin: 10px;
+    width: 80%;
+    padding: 2%;
+    border: 2px solid rgb(25, 2, 41);
+}
+
+img{                                        /*Imagen*/
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+}
+
+.tarjeta p{                                 /*Texto de pie de página*/
+    text-align: center;
+}
+#mariTextoIm{                               /*Imagen + texto de foto Marilina*/
+    padding-bottom: 2%;
+}
